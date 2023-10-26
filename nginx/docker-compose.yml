@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+  nginx:
+    image: nginx:alpine
+    # restart: always
+    ports:
+      - "80:80"
+      # - "443:443"
+    volumes:
+      - ./html:/usr/share/nginx/html:ro
+      - ./config:/etc/nginx
+      # - /marcelo/16_nginx/cert:/cert:ro
